@@ -49,7 +49,7 @@ export default function ContactSection() {
                 <div className="p-3 rounded-full bg-primary/10">
                   <MailIcon className="h-6 w-6 text-primary" />
                 </div>
-                <div>
+                <div className="w-full">
                   <h4 className="font-medium">Email</h4>
                   <a 
                     href="mailto:rojo.q.randy@gmail.com"
@@ -63,7 +63,7 @@ export default function ContactSection() {
                 <div className="p-3 rounded-full bg-primary/10">
                   <PhoneIcon className="h-6 w-6 text-primary" />
                 </div>
-                <div>
+                <div className="w-full">
                   <h4 className="font-medium">Phone</h4>
                   <a 
                     href="tel:+526182242231"
@@ -77,7 +77,7 @@ export default function ContactSection() {
                 <div className="p-3 rounded-full bg-primary/10">
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
-                <div>
+                <div className="w-full">
                   <h4 className="font-medium">Location</h4>
                   <a 
                     className="text-foreground hover:text-primary transition-colors"

@@ -35,7 +35,7 @@ export default function Navbar() {
         <a href="#hero" className="text-xl font-bold text-primary flex items-center">
           <span className="relative z-10">
             {" "}
-            <span className="text-glow text-foreground"> Developer {`<`}Randy</span> Rojo{` />`}
+            <span className="text-glow text-foreground"> {`<`}Randy</span> Rojo{` />`}
           </span>
         </a>
 
