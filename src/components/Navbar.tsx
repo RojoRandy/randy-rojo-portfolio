@@ -3,11 +3,12 @@ import { cn } from "../lib/utils"
 import { MenuIcon, X } from "lucide-react"
 
 const navItems = [
-  { name: 'Home', href: "#hero" },
-  { name: 'About', href: "#about" },
-  { name: 'Skills', href: "#skills" },
-  { name: 'Projects', href: "#projects" },
-  { name: 'Contact', href: "#contact" },
+  { id: 'hero', name: 'Inicio', href: "#hero" },
+  { id: 'about', name: 'Sobre mi', href: "#about" },
+  { id: 'skills', name: 'Habilidades', href: "#skills" },
+  { id: 'career', name: 'Carrera', href: "#career" },
+  { id: 'projects', name: 'Proyectos', href: "#projects" },
+  { id: 'contact', name: 'Contacto', href: "#contact" },
 ]
 
 export default function Navbar() {
@@ -23,6 +24,16 @@ export default function Navbar() {
 
     return () => window.removeEventListener('scroll', handleScroll);
   },[])
+
+  const onClickSection = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    const target = e?.target as HTMLAnchorElement;
+    const id = target.getAttribute('href')?.replace('#','')
+    const element = document.getElementById(String(id));
+    element?.scrollIntoView({
+      behavior: 'smooth'
+    })
+  }
 
   return (
     <nav 
@@ -46,6 +57,7 @@ export default function Navbar() {
               key={key}
               href={item.href}
               className="text-foreground/80 hover:text-primary transition-colors duration-300"
+              onClick={onClickSection}
             >{item.name}
             </a>
           ))}
@@ -71,7 +83,10 @@ export default function Navbar() {
                 key={key}
                 href={item.href}
                 className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                onClick={ () => setIsMenuOpen(false)}
+                onClick={(e)=>{
+                  onClickSection(e)
+                  setIsMenuOpen(false)
+                }}
               >{item.name}
               </a>
             ))}

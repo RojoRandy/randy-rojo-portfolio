@@ -49,7 +49,7 @@ export default function ProjectsSection() {
             projects.map((project, key) => (
               <div
                 key={key}
-                className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
+                className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover card-reveal"
               >
                 <div className="h-48 overflow-hidden">
                   <img src={project.image} alt={project.title} className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110" />

@@ -1,9 +1,9 @@
 import AboutSection from "../components/AboutSection";
+import CareerSection from "../components/CareerSection";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
 import Navbar from "../components/Navbar";
-import ProjectsSection from "../components/ProjectsSection";
 import SkillsSection from "../components/SkillsSection";
 import StarBackground from "../components/StarBackground";
 import ThemeToggle from "../components/ThemeToggle";
@@ -11,9 +11,9 @@ import ThemeToggle from "../components/ThemeToggle";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+    <div className="min-h-screen bg-background text-foreground">
       {/* Theme Toggle */}
-      {/* <ThemeToggle /> */}
+      <ThemeToggle />
 
       {/* Background Effects */}
       <StarBackground />
@@ -26,7 +26,8 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <SkillsSection />
-        <ProjectsSection />
+        <CareerSection />
+        {/* <ProjectsSection /> */}
         <ContactSection />
       </main>
 

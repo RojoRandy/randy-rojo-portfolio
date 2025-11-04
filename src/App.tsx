@@ -23,7 +23,6 @@ function App() {
         transition={Zoom}
       />
 
-      {/* <ToastContainer autoClose={false} /> */}
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />}/>

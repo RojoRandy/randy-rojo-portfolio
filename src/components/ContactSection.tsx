@@ -29,19 +29,19 @@ export default function ContactSection() {
     <section id="contact" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          Get In
-          <span className="text-primary"> Touch</span>
+          Trabajemos
+          <span className="text-primary"> Juntos</span>
         </h2>
 
         <p className="text-center text-foreground mb-12 max-w-2xl mx-auto">
-          Have a project in mind or want to collaborate? Feel free to reach out.
-          I'm always open to discussing new opportunities.
+          ¿Deseas conocerme un poco más?
+          Sientete libre de contactarme, estoy abierto a platicar nuevas oportunidades.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-8 ">
             <h3 className="text-2xl font-semibold mb-6">
-              Contact Information
+              Información de Contacto
             </h3>
 
             <div className="space-y-6 justify-center">
@@ -64,7 +64,7 @@ export default function ContactSection() {
                   <PhoneIcon className="h-6 w-6 text-primary" />
                 </div>
                 <div className="w-full">
-                  <h4 className="font-medium">Phone</h4>
+                  <h4 className="font-medium">Teléfono</h4>
                   <a 
                     href="tel:+526182242231"
                     className="text-foreground hover:text-primary transition-colors"
@@ -78,18 +78,18 @@ export default function ContactSection() {
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
                 <div className="w-full">
-                  <h4 className="font-medium">Location</h4>
+                  <h4 className="font-medium">Ubicación</h4>
                   <a 
                     className="text-foreground hover:text-primary transition-colors"
                   >
-                    Durango, Mexico
+                    Durango, México
                   </a>
                 </div>
               </div>
             </div>
 
             <div className="pt-8">
-              <h4 className="font-medium mb-4">Connect With Me</h4>
+              <h4 className="font-medium mb-4">Buscame en</h4>
               <div className="flex space-x-4 justify-center">
                 <a 
                   href="https://www.linkedin.com/in/rojo-randy/"
@@ -103,7 +103,7 @@ export default function ContactSection() {
           </div>
 
           <div className="bg-card p-8 rounded-lg shadow-xs">
-            <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
+            <h3 className="text-2xl font-semibold mb-6"> Enviame un mensaje</h3>
 
             <form 
               onSubmit={(e) => handleSubmit(e)}
@@ -113,7 +113,7 @@ export default function ContactSection() {
                 <label 
                   htmlFor="name"
                   className="block text-sm font-medium mb-2"
-                > Your Name</label>
+                > Tu nombre</label>
                 <input 
                   type="text" 
                   id="name" 
@@ -127,7 +127,7 @@ export default function ContactSection() {
                 <label 
                   htmlFor="email"
                   className="block text-sm font-medium mb-2"
-                > Your Email</label>
+                > Tu correo</label>
                 <input 
                   type="email" 
                   id="email" 
@@ -141,24 +141,25 @@ export default function ContactSection() {
                 <label 
                   htmlFor="message"
                   className="block text-sm font-medium mb-2"
-                > Your Email</label>
+                > Tu mensaje</label>
                 <textarea 
                   id="message" 
                   name="message" 
                   required 
                   className="w-full px-4 py-3 rounded-md border bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none"
-                  placeholder="Enter your message here..."
+                  placeholder="Ingresa tu mensaje aqui..."
                 />
               </div>
 
               <button 
                 type="submit"
                 className={cn(
-                  "cosmic-button w-full flex items-center justify-center gap-2"
+                  "cosmic-button w-full flex items-center justify-center gap-2 disabled:bg-primary/20 disabled:cursor-not-allowed"
                 )}
-                disabled={isSubmitting}
+                // disabled={isSubmitting}
+                disabled
               >
-                { isSubmitting ? "Sending..." : "Send Message" }
+                { isSubmitting ? "Enviando..." : "Enviar Mensaje" }
                 
                 <Send size={26} />
               </button>

@@ -1,4 +1,5 @@
 import { ArrowDown } from "lucide-react";
+import { cn } from "../lib/utils";
 
 export default function HeroSection() {
   return (
@@ -8,6 +9,16 @@ export default function HeroSection() {
     >
       <div className="container max-w-6xl mx-auto text-center z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+          <div className="relative group opacity-0 animate-fade-in md:animate-fade-in-delay-4 order-1 md:order-2">
+            <div 
+              className={cn(
+                "absolute bg-linear-to-r from-primary/80 to-red-950/80 mx-auto inset-0 rounded-full blur-lg -z-10 transition-all duration-1000 ease-in-out",
+                "group-hover:scale-110"
+              )} />
+            <img src="/me.png" alt="Randy Rojo" className="rounded-full mx-auto" />
+          </div>
+
           <div className="space-y-6 order-2 md:order-1">
             <p className="p-2 bg-linear-to-r from-primary/80 via-primary/30 to-primary/80 rounded-full opacity-0 animate-fade-in-delay-1">
               Software Engineer Full-Stack | Arquitecto de Sistemas
@@ -22,7 +33,7 @@ export default function HeroSection() {
             <p
               className="text-lg md:text-xl text-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-delay-3"
             >
-              Experiencia diseñando y construyendo arquitecturas modernas basado en Microservicios y Serverless.
+              Experiencia diseñando y orquestando la transformación arquitectónica de monolitos a microservicios y entornos Serverless
             </p>
 
             <div className="opacity-0 animate-fade-in-delay-4 pt-3">
@@ -30,6 +41,8 @@ export default function HeroSection() {
             </div>
           </div>
 
+
+          {/* 
           <div 
             className="relative group flex justify-center items-center" 
             role="img" 
@@ -66,7 +79,7 @@ export default function HeroSection() {
                 src="/me.png" 
                 decoding="async" 
                 data-nimg="intrinsic" 
-                className="relative rounded-full object-cover backdrop-blur-sm transform group-hover:scale-105 transition-transform duration-500" 
+                className="w-full h-full relative rounded-full object-cover backdrop-blur-sm transform group-hover:scale-105 transition-transform duration-500" 
                 style={{
                   position: "absolute",
                   inset: "0px",
@@ -84,7 +97,9 @@ export default function HeroSection() {
                 }}
               />
             </span>
-          </div>
+          </div> 
+          */}
+
         </div>
       </div>
 
