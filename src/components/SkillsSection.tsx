@@ -12,7 +12,7 @@ const skills = [
   {name: 'TypeScript', level: 95, category:'languages', icon: <SiTypescript size={40} className="group-hover:fill-sky-700" />, shadow: "hover:shadow-sky-700" },
   {name: 'JavaScript', level: 95, category:'languages', icon: <SiJavascript size={40} className="group-hover:fill-amber-300" />, shadow: "hover:shadow-amber-300" },
   {name: 'C#', level: 70, category:'languages', icon: <TbBrandCSharp size={40} className="group-hover:stroke-sky-500"/>, shadow: "hover:shadow-sky-500" },
-  {name: 'Python', level: 60, category:'languages', icon: <SiPython size={40} className="group-hover:fill-yellow-500"/>, shadow: "hover:shadow-yellow-500" },
+  {name: 'Python', level: 40, category:'languages', icon: <SiPython size={40} className="group-hover:fill-yellow-500"/>, shadow: "hover:shadow-yellow-500" },
   
   // Frontend
   {name: 'HTML', level: 90, category:'frontend', icon: <SiHtml5 size={40} className="group-hover:fill-orange-600"/>, shadow: "hover:shadow-orange-600" },
@@ -29,7 +29,7 @@ const skills = [
   {name: 'Node.js', level: 90, category:'backend', icon: <SiNodedotjs size={40} className="group-hover:fill-green-500"/>, shadow: "hover:shadow-green-500" },
   {name: 'Express', level: 80, category:'backend', icon: <SiExpress size={40} className="group-hover:fill-green-500"/>, shadow: "hover:shadow-green-500" },
   {name: 'GraphQL', level: 70, category:'backend', icon: <SiGraphql size={40} className="group-hover:fill-pink-500"/>, shadow: "hover:shadow-pink-500" },
-  {name: 'FastAPI', level: 50, category:'backend', icon: <SiFastapi size={40} className="group-hover:fill-emerald-700"/>, shadow: "hover:shadow-emerald-700" },
+  {name: 'FastAPI', level: 40, category:'backend', icon: <SiFastapi size={40} className="group-hover:fill-emerald-700"/>, shadow: "hover:shadow-emerald-700" },
 
   //Databases
   {name: 'SQL Server', level: 85, category:'databases', icon: <DiMsqlServer size={40} className="group-hover:fill-red-500"/>, shadow: "hover:shadow-red-500" },
@@ -86,7 +86,7 @@ export default function SkillsSection() {
           }
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:gap-6">
           {
             filteredSkills.map((skill, key) => (
               <div 

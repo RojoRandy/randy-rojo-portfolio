@@ -48,10 +48,10 @@ export default function CareerSection() {
         {
           career.map((job, key) => (
             <div 
-              className="p-4 group bg-card rounded-lg overflow-auto shadow-lg hover:shadow-primary/20 card-hover card-reveal"
+              className="p-4 group bg-card rounded-lg overflow-auto shadow-lg hover:shadow-primary/20 card-hover card-reveal space-y-4"
               key={key}
             >
-              <div className="flex flex-col md:flex-row md:justify-between">
+              <div className="flex flex-col md:flex-row md:justify-between gap-2">
                 <h3 className="text-xl md:text-lg font-bold">
                   <span className="text-primary">{job.position} : </span>
                   {job.company}</h3>

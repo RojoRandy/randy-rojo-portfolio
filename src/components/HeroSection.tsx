@@ -37,7 +37,7 @@ export default function HeroSection() {
             </p>
 
             <div className="opacity-0 animate-fade-in-delay-4 pt-3">
-              <a className="cosmic-button" href="#projects">Ver mi trabajo</a>
+              <a className="cosmic-button" href="#career">Ver mi trabajo</a>
             </div>
           </div>
 

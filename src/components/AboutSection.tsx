@@ -32,7 +32,7 @@ export default function AboutSection() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col md:gap-6">
             <div className="gradient-border p-6 card-hover card-reveal">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
