@@ -33,7 +33,7 @@ export default function AboutSection() {
           </div>
 
           <div className="flex flex-col md:gap-6">
-            <div className="gradient-border p-6 card-hover card-reveal">
+            <div className="gradient-border p-6 card-hover card-reveal hover:shadow-white/20">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <Code className="w-6 h-6 text-primary" />
@@ -46,7 +46,7 @@ export default function AboutSection() {
                 </div>
               </div>
             </div>
-            <div className="gradient-border p-6 card-hover card-reveal">
+            <div className="gradient-border p-6 card-hover card-reveal hover:shadow-white/20">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <User className="w-6 h-6 text-primary" />
@@ -59,7 +59,7 @@ export default function AboutSection() {
                 </div>
               </div>
             </div>
-            <div className="gradient-border p-6 card-hover card-reveal">
+            <div className="gradient-border p-6 card-hover card-reveal hover:shadow-white/20">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <Briefcase className="w-6 h-6 text-primary" />

@@ -3,9 +3,20 @@ import Home from "./pages/Home"
 import NotFound from "./pages/NotFound"
 import { ToastContainer, Zoom } from "react-toastify"
 import { useTheme } from "./hooks/useTheme"
+import { useEffect } from "react"
 
 function App() {
-  const { isDarkMode } = useTheme()
+  const { isDarkMode, setDarkMode, setLightMode } = useTheme()
+
+  useEffect(()=>{
+    const storedTheme = localStorage.getItem("theme")
+
+    if(storedTheme === "light") {
+      setLightMode()
+    } else {
+      setDarkMode()
+    }
+  },[])
 
   return (
     <>
