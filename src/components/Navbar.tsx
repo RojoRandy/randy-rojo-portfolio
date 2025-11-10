@@ -74,7 +74,8 @@ export default function Navbar() {
               href={item.href}
               className="text-foreground/80 hover:text-primary transition-colors duration-300"
               onClick={onClickSection}
-            >{t(item.name)}
+            >
+              {t(item.name)}
             </a>
           ))}
         </div>
@@ -103,7 +104,8 @@ export default function Navbar() {
                   onClickSection(e)
                   setIsMenuOpen(false)
                 }}
-              >{item.name}
+              >
+                {t(item.name)}
               </a>
             ))}
           </div>
