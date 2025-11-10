@@ -39,6 +39,7 @@ export default function Navbar() {
   const handleLanguageToggle = () => {
     const newLang = i18n.language === 'en' ? 'es' : 'en';
     i18n.changeLanguage(newLang);
+    localStorage.setItem('lang',newLang)
   }
 
   return (
