@@ -2,9 +2,11 @@ import { LinkedinIcon, MailIcon, MapPin, PhoneIcon, Send } from "lucide-react";
 import { cn } from "../lib/utils";
 import { toast, type ToastContentProps } from "react-toastify";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function ContactSection() {
 
+  const {t} = useTranslation()
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -29,19 +31,18 @@ export default function ContactSection() {
     <section id="contact" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          Trabajemos
-          <span className="text-primary"> Juntos</span>
+          {t('home.contact.title1')}
+          <span className="text-primary"> {t('home.contact.title2')}</span>
         </h2>
 
         <p className="text-center text-foreground mb-12 max-w-2xl mx-auto">
-          ¿Deseas conocerme un poco más?
-          Sientete libre de contactarme, estoy abierto a platicar nuevas oportunidades.
+          {t('home.contact.description')}
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-8 ">
             <h3 className="text-2xl font-semibold mb-6">
-              Información de Contacto
+              {t('home.contact.contactInformation')}
             </h3>
 
             <div className="space-y-6 justify-center">
@@ -50,7 +51,7 @@ export default function ContactSection() {
                   <MailIcon className="h-6 w-6 text-primary" />
                 </div>
                 <div className="w-full">
-                  <h4 className="font-medium">Email</h4>
+                  <h4 className="font-medium">{t('home.contact.email')}</h4>
                   <a 
                     href="mailto:rojo.q.randy@gmail.com"
                     className="text-foreground hover:text-primary transition-colors"
@@ -64,7 +65,7 @@ export default function ContactSection() {
                   <PhoneIcon className="h-6 w-6 text-primary" />
                 </div>
                 <div className="w-full">
-                  <h4 className="font-medium">Teléfono</h4>
+                  <h4 className="font-medium">{t('home.contact.phone')}</h4>
                   <a 
                     href="tel:+526182242231"
                     className="text-foreground hover:text-primary transition-colors"
@@ -78,7 +79,7 @@ export default function ContactSection() {
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
                 <div className="w-full">
-                  <h4 className="font-medium">Ubicación</h4>
+                  <h4 className="font-medium">{t('home.contact.location')}</h4>
                   <a 
                     className="text-foreground hover:text-primary transition-colors"
                   >
@@ -89,7 +90,7 @@ export default function ContactSection() {
             </div>
 
             <div className="pt-8">
-              <h4 className="font-medium mb-4">Buscame en</h4>
+              <h4 className="font-medium mb-4">{t('home.contact.findMeOn')}</h4>
               <div className="flex space-x-4 justify-center">
                 <a 
                   href="https://www.linkedin.com/in/rojo-randy/"
@@ -103,7 +104,7 @@ export default function ContactSection() {
           </div>
 
           <div className="bg-card p-8 rounded-lg shadow-xs">
-            <h3 className="text-2xl font-semibold mb-6"> Enviame un mensaje</h3>
+            <h3 className="text-2xl font-semibold mb-6">{t('home.contact.sendMeAMessage')}</h3>
 
             <form 
               onSubmit={(e) => handleSubmit(e)}
@@ -113,41 +114,41 @@ export default function ContactSection() {
                 <label 
                   htmlFor="name"
                   className="block text-sm font-medium mb-2"
-                > Tu nombre</label>
+                > {t('home.contact.nameLabel')}</label>
                 <input 
                   type="text" 
                   id="name" 
                   name="name" 
                   required 
                   className="w-full px-4 py-3 rounded-md border bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
-                  placeholder="Ej. Randy Rojo..."
+                  placeholder={t('home.contact.namePlaceholder')}
                 />
               </div>
               <div>
                 <label 
                   htmlFor="email"
                   className="block text-sm font-medium mb-2"
-                > Tu correo</label>
+                > {t('home.contact.emailLabel')}</label>
                 <input 
                   type="email" 
                   id="email" 
                   name="email" 
                   required 
                   className="w-full px-4 py-3 rounded-md border bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
-                  placeholder="your_email@gmail.com"
+                  placeholder={t('home.contact.emailPlaceholder')}
                 />
               </div>
               <div>
                 <label 
                   htmlFor="message"
                   className="block text-sm font-medium mb-2"
-                > Tu mensaje</label>
+                > {t('home.contact.messageLabel')}</label>
                 <textarea 
                   id="message" 
                   name="message" 
                   required 
                   className="w-full px-4 py-3 rounded-md border bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none"
-                  placeholder="Ingresa tu mensaje aqui..."
+                  placeholder={t('home.contact.messagePlaceholder')}
                 />
               </div>
 
@@ -159,7 +160,7 @@ export default function ContactSection() {
                 // disabled={isSubmitting}
                 disabled
               >
-                { isSubmitting ? "Enviando..." : "Enviar Mensaje" }
+                { isSubmitting ? "Enviando..." : t('home.contact.sendButton') }
                 
                 <Send size={26} />
               </button>

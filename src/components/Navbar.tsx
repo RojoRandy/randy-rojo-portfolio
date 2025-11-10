@@ -1,17 +1,18 @@
 import { useEffect, useState } from "react"
 import { cn } from "../lib/utils"
-import { MenuIcon, X } from "lucide-react"
+import { LanguagesIcon, MenuIcon, X } from "lucide-react"
+import { useTranslation } from "react-i18next"
 
 const navItems = [
-  { id: 'hero', name: 'Inicio', href: "#hero" },
-  { id: 'about', name: 'Sobre mi', href: "#about" },
-  { id: 'skills', name: 'Habilidades', href: "#skills" },
-  { id: 'career', name: 'Carrera', href: "#career" },
-  { id: 'projects', name: 'Proyectos', href: "#projects" },
-  { id: 'contact', name: 'Contacto', href: "#contact" },
+  { id: 'hero', name: 'home.navbar.home', href: "#hero" },
+  { id: 'about', name: 'home.navbar.about', href: "#about" },
+  { id: 'skills', name: 'home.navbar.skills', href: "#skills" },
+  { id: 'career', name: 'home.navbar.career', href: "#career" },
+  { id: 'contact', name: 'home.navbar.contact', href: "#contact" },
 ]
 
 export default function Navbar() {
+  const { t, i18n } = useTranslation()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -35,6 +36,11 @@ export default function Navbar() {
     })
   }
 
+  const handleLanguageToggle = () => {
+    const newLang = i18n.language === 'en' ? 'es' : 'en';
+    i18n.changeLanguage(newLang);
+  }
+
   return (
     <nav 
     className={cn(
@@ -50,6 +56,16 @@ export default function Navbar() {
           </span>
         </a>
 
+        <button
+          className="flex gap-4 text-foreground/80 hover:text-primary transition-colors duration-300 cursor-pointer"
+          onClick={handleLanguageToggle}
+        >
+          <LanguagesIcon size={24}  />
+          <span className="text-s">
+            {t(i18n.language === 'en' ? 'home.navbar.langEs' : 'home.navbar.langEn')}
+          </span>
+        </button>
+
         {/* desktop nav */}
         <div className="hidden md:flex space-x-8">
           {navItems.map((item, key) => (
@@ -58,7 +74,7 @@ export default function Navbar() {
               href={item.href}
               className="text-foreground/80 hover:text-primary transition-colors duration-300"
               onClick={onClickSection}
-            >{item.name}
+            >{t(item.name)}
             </a>
           ))}
         </div>

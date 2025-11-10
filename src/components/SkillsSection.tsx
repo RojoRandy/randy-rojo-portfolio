@@ -4,8 +4,42 @@ import { SiJavascript, SiTypescript, SiPython, SiHtml5, SiCss3, SiTailwindcss, S
 import { TbBrandCSharp } from "react-icons/tb";
 import { FaAws } from "react-icons/fa";
 import { DiMsqlServer, DiVisualstudio } from "react-icons/di";
+import { useTranslation } from "react-i18next";
 
-const categories = ["all", "languages", "frontend", "mobile", "backend", "databases", "tools", "aws"]
+const categories = [
+  {
+    translation: 'home.skills.all',
+    value: 'all'
+  },
+  {
+    translation: 'home.skills.languages',
+    value: 'languages'
+  },
+  {
+    translation: 'home.skills.backend',
+    value: 'backend'
+  },
+  {
+    translation: 'home.skills.frontend',
+    value: 'frontend'
+  },
+  {
+    translation: 'home.skills.mobile',
+    value: 'mobile'
+  },
+  {
+    translation: 'home.skills.databases',
+    value: 'databases'
+  },
+  {
+    translation: 'home.skills.tools',
+    value: 'tools'
+  },
+  {
+    translation: 'home.skills.cloud',
+    value: 'cloud'
+  },
+]
 
 const skills = [
   // Languages
@@ -44,16 +78,17 @@ const skills = [
   {name: 'VS Code', level: 80, category:'tools', icon: <DiVisualstudio size={40} className="group-hover:fill-sky-500"/>, shadow: "hover:shadow-sky-500" },
   
   //AWS Cloud 
-  {name: 'Lambda', level: 80, category:'aws', icon: <SiAwslambda size={40} className="group-hover:fill-orange-500"/>, shadow: "hover:shadow-orange-500" },
-  {name: 'API Gateway', level: 70, category:'aws', icon: <SiAmazonapigateway size={40} className="group-hover:fill-yellow-500"/>, shadow: "hover:shadow-yellow-500" },
-  {name: 'IAM', level: 70, category:'aws', icon: <SiAmazoniam size={40} className="group-hover:fill-red-500"/>, shadow: "hover:shadow-red-500" },
-  {name: 'S3', level: 70, category:'aws', icon: <SiAmazons3 size={40} className="group-hover:fill-green-500"/>, shadow: "hover:shadow-green-500" },
-  {name: 'Amplify', level: 70, category:'aws', icon: <SiAwsamplify size={40} className="group-hover:fill-yellow-500"/>, shadow: "hover:shadow-yellow-500" },
-  {name: 'CloudFront', level: 60, category:'aws', icon: <FaAws size={40} className="group-hover:fill-yellow-500"/>, shadow: "hover:shadow-yellow-500" },
+  {name: 'Lambda', level: 80, category:'cloud', icon: <SiAwslambda size={40} className="group-hover:fill-orange-500"/>, shadow: "hover:shadow-orange-500" },
+  {name: 'API Gateway', level: 70, category:'cloud', icon: <SiAmazonapigateway size={40} className="group-hover:fill-yellow-500"/>, shadow: "hover:shadow-yellow-500" },
+  {name: 'IAM', level: 70, category:'cloud', icon: <SiAmazoniam size={40} className="group-hover:fill-red-500"/>, shadow: "hover:shadow-red-500" },
+  {name: 'S3', level: 70, category:'cloud', icon: <SiAmazons3 size={40} className="group-hover:fill-green-500"/>, shadow: "hover:shadow-green-500" },
+  {name: 'Amplify', level: 70, category:'cloud', icon: <SiAwsamplify size={40} className="group-hover:fill-yellow-500"/>, shadow: "hover:shadow-yellow-500" },
+  {name: 'CloudFront', level: 60, category:'cloud', icon: <FaAws size={40} className="group-hover:fill-yellow-500"/>, shadow: "hover:shadow-yellow-500" },
 
 ]
 
 export default function SkillsSection() {
+  const { t } = useTranslation()
   const [activeCategory, setActiveCategory] = useState("all");
 
   const filteredSkills = skills.filter((skill) => activeCategory === "all" || skill.category === activeCategory).sort((a,b) => b.level - a.level)
@@ -65,8 +100,8 @@ export default function SkillsSection() {
     >
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          Mis
-          <span className="text-primary"> Habilidades</span>
+          {t('home.skills.title1')}
+          <span className="text-primary"> {t('home.skills.title2')}</span>
         </h2>
 
         <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -74,13 +109,13 @@ export default function SkillsSection() {
             categories.map((category, key) => (
               <button 
                 key={key} 
-                onClick={() => setActiveCategory(category)}
+                onClick={() => setActiveCategory(category.value)}
                 className={cn(
                   "px-5 py-2 rounded-full transition-colors duration-300 capitalize cursor-pointer hover:bg-primary",
-                  activeCategory === category ? "bg-primary text-primary-foreground" : "bg-background/70 text-foreground"
+                  activeCategory === category.value ? "bg-primary text-primary-foreground" : "bg-background/70 text-foreground"
                 )}
               >
-                {category}
+                {t(category.translation)}
               </button>
             ))
           }

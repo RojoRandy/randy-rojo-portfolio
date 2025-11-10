@@ -1,0 +1,114 @@
+{
+  "home": {
+    "navbar": {
+      "home": "Home",
+      "about": "About Me",
+      "skills": "Skills",
+      "career": "Career",
+      "contact": "Contact",
+      "langEs": "ES",
+      "langEn": "EN"
+    },
+    "hero": {
+      "role": "Full-Stack Software Engineer | Systems Architect",
+      "description": "Experience designing and orchestrating the architectural transformation from monoliths to microservices",
+      "careerButton": "View my career"
+    },
+    "about": {
+      "title1": "About",
+      "title2": "Me",
+      "role": "Passionate and Committed Developer",
+      "description": "My proficiency centers on the integral orchestration of the product lifecycle: encompassing strategic solution design, defining scalable architectures (e.g., Microservices), and managing implementation through to automated deployment within mission-critical Cloud infrastructures. I am dedicated to realizing the business vision through cohesive, high-performance software engineering.",
+      "contactButton": "Reach out to me",
+      "resumeButton": "Download my resume",
+      "card1": {
+        "title": "Back-End Development",
+        "description": "Building scalable systems using modern technologies and frameworks."
+      },
+      "card2": {
+        "title": "Front-End Developement",
+        "description": "Developing responsive user interfaces with a focus on user experience (UX)."
+      },
+      "card3": {
+        "title": "Project Management",
+        "description": "Leading projects from conception to completion with agile methodologies"
+      }
+    },
+    "skills": {
+      "title1": "My",
+      "title2": "Skills",
+      "all": "All",
+      "languages": "Languages",
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "mobile": "Mobile",
+      "databases": "Databases",
+      "tools": "Tools",
+      "cloud": "Cloud"
+    },
+    "career": {
+      "title1": "Professional",
+      "title2": "Career",
+      "softSkills": {
+        "leading": "Leadership",
+        "design": "UX/UI Design",
+        "architecture": "Architecture",
+        "analysis": "Analysis",
+        "development": "Development",
+        "infrastructure": "Infrastructure",
+        "transformation": "Transformation",
+        "knowledgeTransfer": "Knowledge Transfer",
+        "integration": "Integration",
+        "adaptability": "Adaptability",
+        "optimization": "Optimization",
+        "collaboration": "Collaboration",
+        "problemSolving": "Problem Solving"
+      },
+      "techStackLabel": "Tech Stack",
+      "softSkillsLabel": "Soft Skills",
+      "career1": {
+        "position": "Junior Sofware Engineer",
+        "period": "Jan / 2017 - Nov / 2019",
+        "description": "I began my professional career as a Software Engineer at SC Computación, focusing on the development, support, and evolution of the company's Software as a Service (SaaS) systems. My experience centered on desktop applications built using the .NET Framework stack and the comprehensive management of relational databases."
+      },
+      "career2": {
+        "position": "Junior Sofware Engineer",
+        "period": "Nov / 2019 - Sep / 2021",
+        "description": "In this role, I joined the development team for a key client in the mining industry. My objective was to provide specialized technical support and develop new systems and modules essential for managing access control and operational security at both office locations and mine sites."
+      },
+      "career3": {
+        "position": "Mid Sofware Engineer",
+        "period": "Oct / 2021 - Jun / 2023",
+        "description": "In this position, my responsibilities centered on the digitalization and optimization of critical mortgage credit processes and the integration of a new Core banking system."
+      },
+      "career4": {
+        "position": "Senior Sofware Engineer",
+        "period": "Jun / 2023 - Jan / 2025",
+        "description": "I was hired as a Technical Lead to direct the complete migration of a business-critical B2B tourism platform. This platform provided national and international travel agencies with a robust catalog of hotels, tours, and transportation services using a commission-based reservation model. The main goal was to transform a monolithic system into a modern, scalable, and maintainable microservices and micro-frontends architecture."
+      },
+      "career5": {
+        "position": "Senior Sofware Engineer",
+        "period": "Jan / 2025 - Sep / 2025",
+        "description": "Design and implementation of scalable software solutions using microservices architectures and modern technologies across both the front-end and back-end to build the company's initial suite of applications from scratch."
+      }
+    },
+    "contact": {
+      "title1": "Work",
+      "title2": "Together",
+      "description": "Interested in learning more about me? Please feel free to contact me; I am open to discussing new opportunities.",
+      "contactInformation": "Contact Information",
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location",
+      "findMeOn": "Find me on",
+      "sendMeAMessage": "Send Me A Message",
+      "nameLabel": "Your Name",
+      "namePlaceholder": "John Doe",
+      "emailLabel": "Your Email",
+      "emailPlaceholder": "your_email@gmail.com",
+      "messageLabel": "Your Message",
+      "messagePlaceholder": "Enter your message here...",
+      "sendButton": "Send Message"
+    }
+  }
+}

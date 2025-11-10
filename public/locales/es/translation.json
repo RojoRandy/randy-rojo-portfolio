@@ -1,0 +1,114 @@
+{
+  "home": {
+    "navbar": {
+      "home": "Inicio",
+      "about": "Sobre mí",
+      "skills": "Habilidades",
+      "career": "Carrera",
+      "contact": "Contacto",
+      "langEs": "ES",
+      "langEn": "EN"
+    },
+    "hero": {
+      "role": "Full-Stack Software Engineer | Arquitecto de Sistemas",
+      "description": "Experiencia diseñando y orquestando la transformación arquitectónica de monolitos a microservicios",
+      "careerButton": "Ver mi carrera"
+    },
+    "about": {
+      "title1": "Sobre",
+      "title2": "Mí",
+      "role": "Desarrollador Apasionado y Comprometido",
+      "description": "Mi experticia radica en la orquestación integral del ciclo de vida del producto: desde el diseño estratégico de la solución y la definición de arquitecturas escalables (Microservicios), hasta la implementación y el despliegue automatizado en entornos Cloud de misión crítica. Mi compromiso es materializar la visión de negocio con ingeniería de software coherente y de alto rendimiento.",
+      "contactButton": "Contáctame",
+      "resumeButton": "Descargar mi currículum",
+      "card1": {
+        "title": "Desarrollo Back-End",
+        "description": "Creación de sistemas escalables implementando tecnologías y frameworks modernos."
+      },
+      "card2": {
+        "title": "Desarrollo Front-End",
+        "description": "Desarrollo de interfaces de usuario responsivas enfocado en la experiencia del usuario (UX)."
+      },
+      "card3": {
+        "title": "Gestión de Proyectos",
+        "description": "Liderado de proyectos de inicio a fin aplicando metodologías agiles"
+      }
+    },
+    "skills": {
+      "title1": "Mis",
+      "title2": "Habilidades",
+      "all": "Todas",
+      "languages": "Lenguajes",
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "mobile": "Móvil",
+      "databases": "Bases de Datos",
+      "tools": "Herramientas",
+      "cloud": "Nube"
+    },
+    "career": {
+      "title1": "Carrera",
+      "title2": "Profesional",
+      "softSkills": {
+        "leading": "Liderazgo",
+        "design": "Diseño UX/UI",
+        "architecture": "Arquitectura",
+        "analysis": "Análisis",
+        "development": "Desarrollo",
+        "infrastructure": "Infraestructura",
+        "transformation": "Transformación",
+        "knowledgeTransfer": "Transferencia de Conocimiento",
+        "integration": "Integración",
+        "adaptability": "Adaptabilidad",
+        "optimization": "Optimización",
+        "collaboration": "Colaboración",
+        "problemSolving": "Resolución de Problemas"
+      },
+      "techStackLabel": "Stack Tecnologico",
+      "softSkillsLabel": "Soft Skills",
+      "career1": {
+        "position": "Jr Sofware Engineer",
+        "period": "Ene / 2017 - Nov / 2019",
+        "description": "Comencé mi carrera profesional como Software Engineer en SC Computación, enfocado en el desarrollo, soporte y evolución de los sistemas Software as a Service (SaaS) de la empresa. Mi experiencia se centró en aplicaciones de escritorio utilizando el stack .NET Framework y en la gestión integral de bases de datos relacionales."
+      },
+      "career2": {
+        "position": "Jr Sofware Engineer",
+        "period": "Nov / 2019 - Sep / 2021",
+        "description": "En esta posición, me integré al equipo de desarrollo de un cliente clave en la industria minera, con el objetivo de brindar soporte técnico especializado y desarrollar nuevos sistemas y módulos esenciales para la gestión de control de accesos y la seguridad operativa en oficinas y sitios de minería."
+      },
+      "career3": {
+        "position": "SSr Sofware Engineer",
+        "period": "Oct / 2021 - Jun / 2023",
+        "description": "En esta posición, mis responsabilidades se centraron en la digitalización y optimización de los procesos críticos de créditos hipotecarios y la integración de un nuevo sistema Core bancario."
+      },
+      "career4": {
+        "position": "Sr Sofware Engineer",
+        "period": "Jun / 2023 - Ene / 2025",
+        "description": "Fui contratado con el rol de Líder Técnico para dirigir la migración completa de una plataforma B2B de turismo, esencial para el negocio, que proveía a agencias de viajes nacionales e internacionales un catálogo robusto de hoteles, tours y servicios de transporte con un modelo de comisiones por reserva. El objetivo principal fue transformar un sistema monolítico en una arquitectura de microservicios y micro-frontends moderna, escalable y mantenible."
+      },
+      "career5": {
+        "position": "Sr Sofware Engineer",
+        "period": "Enero 2020 - Presente",
+        "description": "Diseño e implementación de soluciones de software escalables utilizando arquitecturas de microservicios y tecnologías modernas tanto en el front-end como en el back-end para construir el primer conjunto de aplicaciones de la empresa desde cero."
+      }
+    },
+    "contact": {
+      "title1": "Trabajemos",
+      "title2": "Juntos",
+      "description": "¿Deseas conocerme un poco más? Sientete libre de contactarme, estoy abierto a platicar nuevas oportunidades.",
+      "contactInformation": "Información de Contacto",
+      "email": "Correo Electrónico",
+      "phone": "Teléfono",
+      "location": "Ubicación",
+      "findMeOn": "Búscame en",
+      "sendMeAMessage": "Envíame un Mensaje",
+      "nameLabel": "Tu Nombre",
+      "namePlaceholder": "John Doe",
+      "emailLabel": "Tu Correo Electrónico",
+      "emailPlaceholder": "tu_correo@gmail.com",
+      "messageLabel": "Tu Mensaje",
+      "messagePlaceholder": "Ingresa tu mensaje aqui...",
+      "sendButton": "Enviar Mensaje"
+    }
+  }
+}
