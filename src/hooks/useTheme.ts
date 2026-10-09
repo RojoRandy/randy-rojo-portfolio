@@ -1,42 +1,25 @@
-import { useEffect, useState } from "react";
+import { useCallback, useState } from 'react'
+
+const apply = (dark: boolean) => {
+  document.documentElement.classList.toggle('dark', dark)
+  try {
+    localStorage.setItem('theme', dark ? 'dark' : 'light')
+  } catch {
+    // storage unavailable
+  }
+}
 
 export const useTheme = () => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
-  
-  useEffect(()=>{
-    const storedTheme = localStorage.getItem("theme")
+  // The initial class is set by the inline script in index.html (no flash).
+  const [isDark, setIsDark] = useState(() =>
+    document.documentElement.classList.contains('dark'),
+  )
 
-    if(storedTheme === "light") {
-      setLightMode()
-    } else {
-      setDarkMode()
-    }
-  },[])
+  const toggleTheme = useCallback(() => {
+    const next = !document.documentElement.classList.contains('dark')
+    apply(next)
+    setIsDark(next)
+  }, [])
 
-  const setDarkMode = () => {
-    document.documentElement.classList.add("dark");
-    localStorage.setItem("theme", "dark");
-    setIsDarkMode(true)
-  }
-
-  const setLightMode = () => {
-    document.documentElement.classList.remove("dark");
-    localStorage.setItem("theme", "light");
-    setIsDarkMode(false)
-  }
-
-  const toggleTheme = () => {
-    if (isDarkMode) {
-      setDarkMode()
-    } else {
-      setLightMode()
-    }
-  }
-
-  return {
-    isDarkMode,
-    toggleTheme,
-    setDarkMode,
-    setLightMode
-  }
+  return { isDark, toggleTheme }
 }

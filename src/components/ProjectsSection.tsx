@@ -1,108 +1,43 @@
-import { ArrowRight, ExternalLinkIcon, GithubIcon } from "lucide-react"
-
-const projects = [
-  {
-    id: 1,
-    title: "SaaS Landing Page",
-    description: "A beatiful landing page app using React and Tailwind.",
-    image: "/projects/project1.png",
-    tags: ["React", "TailwindCSS", "Supabase"],
-    demoURL: "#",
-    githubUrl: "#"
-  },
-  {
-    id: 2,
-    title: "Orbit Analytics Dashboard",
-    description: "Interactive analytics dashboard with data visualization and filtering capabilities.",
-    image: "/projects/project2.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
-    demoURL: "#",
-    githubUrl: "#"
-  },
-  {
-    id: 3,
-    title: "E-commerce Platform",
-    description: "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
-    demoURL: "#",
-    githubUrl: "#"
-  },
-]
+import { useLanguage } from '../hooks/useLanguage'
+import { projectMeta } from '../content/shared'
+import Chip from './Chip'
+import Section from './Section'
 
 export default function ProjectsSection() {
+  const { t } = useLanguage()
+  const p = t.projects
+
   return (
-    <section id="projects" className="py-24 px-4 relative">
-      <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center"> 
-          Featured
-          <span className="text-primary"> Projects</span>
-        </h2>
-
-        <p className="text-center text-foreground mb-12 max-w-2xl mx-auto">
-          Here are some of my recent projects. Each project was carefully crafted with attention to
-          detail, performance, and user experience.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {
-            projects.map((project, key) => (
-              <div
-                key={key}
-                className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover card-reveal"
-              >
-                <div className="h-48 overflow-hidden">
-                  <img src={project.image} alt={project.title} className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110" />
-                </div>
-
-
-                <div className="p-6">
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map((tag) => (
-                      <span className="px-2 py-1 text-xs font-medium rounded-full bg-primary/10 border text-foreground">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                  <p className="text-foreground text-sm mb-4">
-                    {project.description}
-                  </p>
-                  <div className="flex justify-between items-center">
-                    <div className="flex-1 flex justify-between space-x-3">
-                      <a 
-                        href={project.demoURL} 
-                        className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                        target="_blank"
-                      >
-                        <ExternalLinkIcon size={20} />
-                      </a>
-                      <a 
-                        href={project.githubUrl} 
-                        className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                        target="_blank"
-                      >
-                        <GithubIcon size={20}/>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))
-          }
-        </div>
-
-        <div className="text-center mt-12">
-          <a 
-            className="cosmic-button w-fit flex items-center mx-auto gap-2" 
-            href="https://github.com/RojoRandy"
-            target="_blank"
+    <Section id="projects" eyebrow={p.eyebrow} title={p.title} intro={p.intro}>
+      <div className="grid gap-5 md:grid-cols-2">
+        {p.items.map((item) => (
+          <article
+            key={item.id}
+            className="flex flex-col rounded-xl border border-border bg-surface p-6 transition hover:-translate-y-0.5 hover:border-accent/50"
           >
-            Check My Github <ArrowRight size={16} />
-          </a>
-        </div>
+            <div className="flex items-start justify-between gap-3">
+              <div>
+                <h3 className="text-xl font-semibold tracking-tight">{item.name}</h3>
+                <p className="mt-1 text-sm text-muted">{item.tagline}</p>
+              </div>
+              <span className="shrink-0 rounded-full bg-accent-soft px-2.5 py-1 font-mono text-[11px] text-accent">
+                {item.period}
+              </span>
+            </div>
+            <p className="mt-4 text-xs text-muted">
+              <span className="font-medium text-fg">{item.role}</span> · {item.context}
+            </p>
+            <ul className="mt-4 list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-muted marker:text-accent">
+              {item.bullets.map((b) => (
+                <li key={b}>{b}</li>
+              ))}
+            </ul>
+            <div className="mt-auto flex flex-wrap gap-2 pt-5">
+              {projectMeta[item.id]?.stack.map((s) => <Chip key={s}>{s}</Chip>)}
+            </div>
+          </article>
+        ))}
       </div>
-    </section>
+    </Section>
   )
 }
