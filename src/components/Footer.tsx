@@ -1,16 +1,20 @@
-import { ArrowUp } from "lucide-react";
-
+import { ArrowUp } from 'lucide-react'
+import { useLanguage } from '../hooks/useLanguage'
+import { profile } from '../content/shared'
 
 export default function Footer() {
+  const { t } = useLanguage()
+
   return (
-    <footer className="py-12 px-4 bg-card relative border-t border-border mt-12 pt-8 flex flex-wrap justify-between items-center">
-      <p className="text-sm text-foreground"> &copy; {new Date().getFullYear()} randy-rojo.com, All rights reserved. </p>
-      <a 
-        href="#hero"
-        className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
-      >
-        <ArrowUp size={20} />
-      </a>
+    <footer className="border-t border-border py-8">
+      <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-5 text-sm text-muted sm:px-8">
+        <p>
+          © {new Date().getFullYear()} {profile.fullName}. {t.footer.rights}
+        </p>
+        <a href="#top" className="inline-flex items-center gap-1.5 transition hover:text-fg">
+          <ArrowUp size={14} /> {t.footer.top}
+        </a>
+      </div>
     </footer>
   )
 }
